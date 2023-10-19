@@ -7,5 +7,10 @@ edition = "2021"
 
 [dependencies]
 futures = "0.3.28"
+prost = "0.12.1"
+prost-types = "0.12.1"
 tokio = { version = "1.33.0", features = ["full"] }
 tokio-util = {version = "0.7.9", features = ["codec"]}
+
+[build-dependencies]
+prost-build = "0.12.1"

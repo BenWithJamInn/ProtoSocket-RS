@@ -62,8 +62,14 @@ async fn process(stream: TcpStream) -> Result<(), Box<dyn Error>> {
     let mut transport = Framed::new(stream, LengthDelimitedCodec::new());
     loop {
         while let Some(frame) = transport.next().await {
-            let data = frame.unwrap();
-            println!("recieved data {:?}", data);
+            match frame {
+                Ok(data) => {
+
+                }
+                Err(e) => {
+                    println!("error")
+                }
+            }
         }
     }
 }

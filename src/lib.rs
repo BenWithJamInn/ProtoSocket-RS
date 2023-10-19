@@ -1,7 +1,16 @@
 pub mod server_socket;
 
+pub mod proto {
+    pub mod sockets {
+        pub mod transport {
+            include!(concat!(env!("OUT_DIR"), "/proto.sockets.transport.rs"));
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
+    use crate::proto;
     use crate::server_socket::{ServerSocket, SocketOptions};
 
     #[test]

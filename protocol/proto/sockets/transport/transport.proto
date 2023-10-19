@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package proto.sockets.transport;
+
+import "google/protobuf/any.proto";
+
+message MessageTransport {
+  google.protobuf.Any payload = 1;
+  // if no acknowledgement is required, this field will be empty
+  optional string acknowledgementID = 2;
+}
