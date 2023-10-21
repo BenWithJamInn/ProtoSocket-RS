@@ -27,9 +27,5 @@ fn get_all_protos(path: PathBuf) -> Vec<PathBuf> {
             }
         }
     }
-    // println!("{:?}", proto_paths.len());
-    // for x in proto_paths.iter() {
-    //     println!("{:?}", x.to_str().unwrap())
-    // }
     proto_paths
 }
