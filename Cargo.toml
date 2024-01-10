@@ -1,5 +1,5 @@
 [package]
-name = "ProtoSocket-RS"
+name = "proto_sockets_rs"
 version = "0.1.0"
 edition = "2021"
 
